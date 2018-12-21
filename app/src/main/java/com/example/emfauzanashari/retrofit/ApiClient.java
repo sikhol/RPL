@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 
-    public static final String BASE_URL = "http://159.89.201.14/batik/public/api/";
+    public static final String BASE_URL = "https://learning-uin.000webhostapp.com/api/";
 
     public static BaseApiService client(){
         Retrofit retrofit = new Retrofit.Builder()

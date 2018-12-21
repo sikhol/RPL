@@ -1,8 +1,7 @@
 package com.example.emfauzanashari.nyoba;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,9 +11,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import com.example.emfauzanashari.Model.Login.UserSession;
+
+import java.util.jar.Attributes;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private UserSession session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +29,7 @@ public class HomeActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        session = new UserSession(this);
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -40,11 +47,21 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        View header= navigationView.getHeaderView(0);
+        TextView textNama= header.findViewById(R.id.textNama);
+        TextView textNim= header.findViewById(R.id.textNim);
+        TextView textProdi = header.findViewById(R.id.textProdi);
+
+        textNama.setText(session.getnama());
+        textNim.setText(session.getId());
+        textProdi.setText(session.getProdi());
+
     }
 
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -81,14 +98,18 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_matakuliah) {
-
-
+            Intent jenisPakaianIntent = new Intent(HomeActivity.this, ListMkActivity.class);
+            startActivity(jenisPakaianIntent);
 
         } else if (id == R.id.nav_ict) {
+            Intent IctIntent = new Intent(HomeActivity.this, TestIctActivity.class);
+            startActivity(IctIntent);
 
         } else if (id == R.id.nav_file) {
 
         } else if (id == R.id.nav_logout) {
+            Intent IctIntent = new Intent(HomeActivity.this, MainActivity.class);
+            startActivity(IctIntent);
 
         }
 

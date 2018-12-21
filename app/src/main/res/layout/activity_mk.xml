@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,12 +7,304 @@
     android:orientation="vertical"
     android:padding="10dp"
     tools:context=".MkActivity">
-<android.support.v7.widget.RecyclerView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-
-</android.support.v7.widget.RecyclerView>
 
 
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txt_Nama_Mk"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Nama MK"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tex_Foto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Foto" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="186dp">
+
+            <ImageView
+                android:id="@+id/img_Foto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="11.70"
+                />
+
+            <EditText
+                android:id="@+id/edt_Status"
+                android:layout_width="249dp"
+                android:layout_height="66dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
+                android:hint="Isi Status"
+                android:inputType="textCapCharacters" />
+
+    <RadioGroup
+        android:id="@+id/rg_menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="120dp">
+
+        <RadioButton
+            android:id="@+id/radio_Materi"
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginStart="9dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Materi" />
+
+        <RadioButton
+            android:id="@+id/radio_Pengumuman"
+            android:layout_width="14dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_weight="1"
+            android:text="Pengumuman" />
+
+                <RadioButton
+                android:id="@+id/radio_Forum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="-16dp"
+                android:layout_marginRight="-16dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toLeftOf="@+id/radio_Materi"
+                android:layout_weight="1"
+                android:text="Forum" />
+    </RadioGroup>
+            <TextView
+                android:id="@+id/txt_Kelas"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/spinner_Kelas"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="195dp"
+                android:layout_marginBottom="-1dp"
+                android:layout_weight="1"
+                android:text="Kategori" />
+
+            <Spinner
+                android:id="@+id/spinner_Kelas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radio_Pengumuman"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="265dp"
+                android:layout_marginTop="-84dp"
+                android:layout_weight="1"
+                android:entries="@array/Kategori"
+                tools:ignore="NotSibling" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Button
+                android:id="@+id/btn_File"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:drawableLeft="@mipmap/ic_file"
+                android:text="Tambahkan File"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:background="#000000"
+                android:id="@+id/btn_Update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/ic_logouin"
+                android:text="Update"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+        <TextView
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:id="@+id/Daftar_Mhs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Daftar Mahasiswa"/>
+
+        <TableLayout
+            android:id="@+id/Tabel_Mhs"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/Tabel_Atas"
+                android:background="@android:color/holo_blue_light"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/Colom1_No"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+
+                    android:text="No" />
+                <TextView
+                    android:id="@+id/Colom1_Nim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:text="NIM" />
+                <TextView
+                    android:id="@+id/Colom1_Nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nama" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/Tabel_Isi"
+                android:background="#ECEFF1"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/Colom2_no"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+                <TextView
+                    android:id="@+id/Colom2_Nim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="16650079" />
+                <TextView
+                    android:id="@+id/Colom2_Nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Muhammad Fauzan A" />
+            </TableRow>
+            <TableRow
+                android:background="#ECEFF1"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/Colom3_No"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="2" />
+                <TextView
+                    android:id="@+id/Colom3_Nim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="16650080" />
+                <TextView
+                    android:id="@+id/Colom3_Nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Johan Mualimin" />
+            </TableRow>
+            <TableRow
+                android:background="#ECEFF1"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/Colom4_No"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+                <TextView
+                    android:id="@+id/Colom4_Nim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="" />
+                <TextView
+                    android:id="@+id/Colom4_Nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="" />
+            </TableRow>
+        </TableLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Button
+                android:id="@+id/btn_Materi_Dosen"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:text="Materi Dari Dosen" />
+
+            <Button
+                android:id="@+id/btn_Materi_Mhs"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="Materi Dari Mahasiswa" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Button
+                android:id="@+id/btn_Pengumuman_Dosen"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Pengumuman Dari Dosen"
+                android:layout_marginRight="10dp" />
+
+            <Button
+                android:id="@+id/btn_Pengumuman_Mhs"
+                android:layout_width="174dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pengumuman Dari Mahasiswa" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

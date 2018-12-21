@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.emfauzanashari.nyoba">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/launcer"
@@ -9,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".HomeActivity"
             android:label="@string/app_name"
@@ -21,7 +23,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MkActivity"></activity>
+        <activity android:name=".MkActivity" />
+        <activity
+            android:name=".ListMkActivity"
+            android:label="Mata Kuliah"></activity>
+
+        <activity android:name=".TestIctActivity"
+            android:label="Placement TestICT"></activity>
     </application>
 
 </manifest>

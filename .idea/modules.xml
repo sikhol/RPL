@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Rpl.iml" filepath="$PROJECT_DIR$/Rpl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Rpl_learningJWT.iml" filepath="$PROJECT_DIR$/Rpl_learningJWT.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

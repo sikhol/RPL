@@ -24,4 +24,21 @@
 
     <include layout="@layout/content_home" />
 
+
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/mobile_testing" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selamat Datang Di E-Learning"/>
+
 </RelativeLayout>

@@ -2,20 +2,20 @@ package com.example.emfauzanashari.Model.Login;
 
 public class LoginUser {
 
-    private String name;
+    private String nim;
     private String password;
 
-    public LoginUser(String name, String password) {
-        this.name = name;
+    public LoginUser(String nim, String password) {
+        this.nim = nim;
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getNim() {
+        return nim;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.nim = nim;
     }
 
     public String getPassword() {
